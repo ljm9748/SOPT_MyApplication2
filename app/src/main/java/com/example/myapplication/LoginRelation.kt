@@ -1,8 +1,11 @@
 package com.example.myapplication
 
+import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login_relation.*
 import kotlinx.android.synthetic.main.login_used.*
@@ -19,15 +22,37 @@ class LoginRelation : AppCompatActivity() {
             }else{
                 val intent= Intent(this, MainActivity::class.java)
                 startActivity(intent)
+
+
             }
         }
         tv_register.setOnClickListener {
-            val intent= Intent(this, NewAccount::class.java)
-            startActivity(intent)
+            //val intent= Intent(this, NewAccount::class.java)
+            //startActivity(intent)
+            var startMainActivityIntent= Intent(this@LoginRelation, NewAccount::class.java)
+            startActivityForResult(startMainActivityIntent, 1)
         }
 
 
     }
 
+    fun String.toEditable(): Editable=Editable.Factory.getInstance().newEditable(this)
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK){
+            when(requestCode){
+                1->{
+                    Toast.makeText(this, "돌아왔습니다.", Toast.LENGTH_SHORT).show()
+                    et_email.visibility=View.VISIBLE
+                    et_pw.visibility=View.VISIBLE
+
+                    et_email.text=data!!.getStringExtra("newid").toEditable()
+                    et_pw.text=data!!.getStringExtra("newpw").toEditable()
+                }
+            }
+
+        }
+
+    }
 
 }
