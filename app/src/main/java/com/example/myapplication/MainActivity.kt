@@ -10,17 +10,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
     }
 
-    fun main(){
-        mul(1,3)
-        var name = "정민"
-        Log.d("printnume", "${name}")
-    }
+//    fun main(){
+//        mul(1,3)
+//        var name = "정민"
+//        Log.d("printnume", "${name}")
+//    }
 
-    fun mul(a:Int, b:Int):Int{
-        val ans: Int =a*b
-        Log.d("print","a*b의 값은: ${a*b} ")
-        return a*b
-    }
+//    fun mul(a:Int, b:Int):Int{
+//        val ans: Int =a*b
+//        Log.d("print","a*b의 값은: ${a*b} ")
+//        return a*b
+//    }
 }
