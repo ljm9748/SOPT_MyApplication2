@@ -17,8 +17,7 @@ class NewAccount : AppCompatActivity() {
         button2.setOnClickListener {
             if (editText3.text.isNullOrBlank() || editText4.text.isNullOrBlank() || editText5.text.isNullOrBlank() || editText6.text.isNullOrBlank()){
                 Toast.makeText(this, "모든 입력란을 채워주세요", Toast.LENGTH_SHORT).show()
-
-            }else{
+            } else{
                 val intent = Intent()
                 intent.putExtra("newid", editText3.text.toString())
                 intent.putExtra("newpw", editText4.text.toString())

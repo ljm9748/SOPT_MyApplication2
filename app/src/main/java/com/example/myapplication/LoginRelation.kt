@@ -15,13 +15,14 @@ class LoginRelation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_relation)
-        //
+
         btn_login.setOnClickListener {
             if(et_email.text.isNullOrBlank() || et_pw.text.isNullOrBlank()){
                 Toast.makeText(this,"아이디와 비밀번호를 확인하세요", Toast.LENGTH_SHORT).show()
             }else{
                 val intent= Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
 
 
             }
@@ -43,8 +44,6 @@ class LoginRelation : AppCompatActivity() {
             when(requestCode){
                 1->{
                     Toast.makeText(this, "돌아왔습니다.", Toast.LENGTH_SHORT).show()
-                    et_email.visibility=View.VISIBLE
-                    et_pw.visibility=View.VISIBLE
 
                     et_email.text=data!!.getStringExtra("newid").toEditable()
                     et_pw.text=data!!.getStringExtra("newpw").toEditable()
