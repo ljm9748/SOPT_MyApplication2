@@ -7,11 +7,12 @@
         tools:context=".NewAccount"
         android:orientation="vertical"
         android:padding="60dp">
+
     <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView3"
-            android:src="@drawable/soptlogo"/>
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/soptlogo" />
     <TextView
             android:text="회원가입"
             android:layout_width="match_parent"
@@ -24,36 +25,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="이메일"
+            android:hint="아이디"
             android:ems="10"
-            android:id="@+id/editText3"
+            android:id="@+id/makeid"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="15dp"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
             android:hint="비밀번호"
-            android:id="@+id/editText4"
-            android:layout_marginTop="20dp"/>
-    <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:hint="비밀번호 확인"
-            android:id="@+id/editText5"
-            android:layout_marginTop="20dp"/>
-
+            android:id="@+id/makepw"
+            android:layout_marginTop="15dp"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="Github 닉네임"
             android:ems="10"
-            android:id="@+id/editText6"
-            android:layout_marginTop="20dp"/>
+            android:hint="이름"
+            android:id="@+id/makename"
+            android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="이메일"
+        android:ems="10"
+        android:id="@+id/makeemail"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="전화번호"
+        android:ems="10"
+        android:id="@+id/makephone"
+        android:layout_marginTop="15dp"/>
     <Button
             android:text="가입완료"
             android:layout_width="match_parent"
