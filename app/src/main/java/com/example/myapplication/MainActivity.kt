@@ -1,7 +1,8 @@
 package com.example.myapplication
 
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.sopt_2ndseminar2.MainPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
