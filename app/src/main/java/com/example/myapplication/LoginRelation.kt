@@ -5,13 +5,11 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
-import android.view.View
 import android.widget.Toast
 import com.example.myapplication.data.RequestLogin
 import com.example.myapplication.data.ResponseLogin
 import com.example.myapplication.network.RequestToServer
 import kotlinx.android.synthetic.main.activity_login_relation.*
-import kotlinx.android.synthetic.main.login_used.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
